@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../image/nike-4-logo-png-transparent.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Nike Bills</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-container">
+            <div class="header__logo">           
+                <a href="./home.html" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="356.39" viewBox="135.5 361.38 1000 356.39">
+                        <path d="M245.8075 717.62406c-29.79588-1.1837-54.1734-9.3368-73.23459-24.4796-3.63775-2.8928-12.30611-11.5663-15.21427-15.2245-7.72958-9.7193-12.98467-19.1785-16.48977-29.6734-10.7857-32.3061-5.23469-74.6989 15.87753-121.2243 18.0765-39.8316 45.96932-79.3366 94.63252-134.0508 7.16836-8.0511 28.51526-31.5969 28.65302-31.5969.051 0-1.11225 2.0153-2.57652 4.4694-12.65304 21.1938-23.47957 46.158-29.37751 67.7703-9.47448 34.6785-8.33163 64.4387 3.34693 87.5151 8.05611 15.898 21.86731 29.6684 37.3979 37.2806 27.18874 13.3214 66.9948 14.4235 115.60699 3.2245 3.34694-.7755 169.19363-44.801 368.55048-97.8366 199.35686-53.0408 362.49439-96.4029 362.51989-96.3672.056.046-463.16259 198.2599-703.62654 301.0914-38.08158 16.2806-48.26521 20.3928-66.16827 26.6785-45.76525 16.0714-86.76008 23.7398-119.89779 22.4235z"/>
+                    </svg>
+                    Nike</a>
+            </div>
+            <div class="header-navigation">
+                <a class="header-home " href="./home.html">home</a>
+                <a class="header-about" href="">about</a>
+                <a class="header-bills navigation--underline" href="./bills.html">bills</a>
+                <a href="./cart.html" class="header-cart">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                </svg>
+                <span class="header-cart__label--red hide"></span>
+                </a>
+            </div>
+        </div>
+        </header>
+        <div class="bills-container">
+            <div class="empty-bill__header">
+                <h2 >Bạn không có đơn hàng nào!</h2>
+            </div>
+            <table class="bills-table ">
+                <thead>
+                    <thead>
+                        <th style ="text-align: left;">Code</th>
+                        <th>Customer Name</th>
+                        <th>Date</th>
+                        <th>Item Numbers</th>
+                        <th>Total Quantity</th>
+                        <th>Total Price</th>
+                        <th>Return</th>
+                    </thead>
+                <tbody>
+                    <!-- render bill items -->
+                </tbody>
+                <tfoot>
+                    
+                </tfoot>
+            </table>
+            <a href="./home.html">
+                <button class="btn-back-to-shopping">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+                    </svg> Back To Shopping
+                </button>
+            </a>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script src="../JavaScript/myFunction.js"></script>
+<script src="../JavaScript/localStorage.js"></script>
+<script src ="../JavaScript/bills.js"></script>
+</html>
