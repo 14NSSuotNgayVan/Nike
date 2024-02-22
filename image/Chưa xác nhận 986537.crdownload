@@ -1,0 +1,1 @@
+{"timestamp":"2024-01-24T12:50:14","code":500,"message":"errors.internal_server_error","data":[{"errorMessage":"Failed to convert value of type 'java.lang.String' to required type 'java.util.UUID'; Invalid UUID string: undefined"}],"total":0}

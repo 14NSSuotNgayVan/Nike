@@ -12,6 +12,8 @@
 </head>
 <body>
     <div class="wrapper">
+        <nav class="main-menu">
+        </nav>
         <header class="header">
             <div class="header-container">
             <div class="header__logo">           
@@ -23,7 +25,7 @@
             </div>
             <div class="header-navigation">
                 <a class="header-home " href="./home.html">home</a>
-                <a class="header-about" href="">about</a>
+                <a class="header-about" href="./contact.html">contact</a>
                 <a class="header-bills navigation--underline" href="./bills.html">bills</a>
                 <a href="./cart.html" class="header-cart">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -34,14 +36,14 @@
             </div>
         </div>
         </header>
-        <div class="bills-container">
+        <div class="bills-container empty-bill">
             <div class="empty-bill__header">
-                <h2 >Bạn không có đơn hàng nào!</h2>
+                <h2 >You don't have any bill!</h2>
             </div>
             <table class="bills-table ">
                 <thead>
                     <thead>
-                        <th style ="text-align: left;">Code</th>
+                        <th>Bill ID</th>
                         <th>Customer Name</th>
                         <th>Date</th>
                         <th>Item Numbers</th>
@@ -66,8 +68,12 @@
         </div>
     </div>
 </body>
+<footer class="footer-distributed">
+</footer>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<script src="../JavaScript/myFunction.js"></script>
-<script src="../JavaScript/localStorage.js"></script>
+<script src ="../JavaScript/myFunction.js"></script>
+<script src="../JavaScript/validate.js"></script>
+<script src ="../JavaScript/navigation.js"></script>
+<script src ="../JavaScript/loginAndRegister.js"></script>
 <script src ="../JavaScript/bills.js"></script>
 </html>

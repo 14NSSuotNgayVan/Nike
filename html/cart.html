@@ -12,6 +12,8 @@
 </head>
 <body>
     <div class="wrapper">
+        <nav class="main-menu">
+        </nav>
         <header class="header">
             <div class="header-container">
             <div class="header__logo">           
@@ -23,7 +25,7 @@
             </div>
             <div class="header-navigation">
                 <a class="header-home " href="./home.html">home</a>
-                <a class="header-about" href="">about</a>
+                <a class="header-about" href="./contact.html">contact</a>
                 <a class="header-bills" href="./bills.html">bills</a>
                 <a href="./cart.html" class="header-cart">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -60,54 +62,72 @@
                         </svg> Back To Shopping
                     </button>
                 </a>
-            <button class="btn-buy" onClick ="toggleModal()">Buy</button>
+            <button class="btn btn-buy" onClick ="toggleModal()">Buy</button>
             <div class="cart-modal-container">
                 <form class="modal-form">
                     <div class="modal-head">
-                        <h2>Thông tin người mua</h2>
+                        <h2>Customer Infomation</h2>
                         <button type = "button" class="btn-close-modal" onClick ="toggleModal()"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
                           </svg>
                           </button>
                     </div>
                     <div class="modal-body">
-                        <h4>Họ và tên <span class = "text--red">*</span></h4>
+                        <h4>Full Name <span class = "text--red">*</span></h4>
                         <div class="full-name">
-                            <input id="first-name" type="text" name="first-name" placeholder="Họ" pattern="[a-z]">
-                            <input id ="last-name" type="text" name="last-name" placeholder="Tên">
+                            <div>
+                                <input id="display-name" type="text" name="display-name" placeholder="Họ và tên" disabled>
+                                <span class="display-name-err text--red"></span>
+                            </div>
                         </div>
-                        <h4>Email<span class = "text--red">*</span></h4>
-                        <input id="email" type="text" name="Email" placeholder="Email">
-                        <h4>Số điện thoại<span class = "text--red">*</span></h4>
+                        <h4>Email<span class = "text--red" >*</span></h4>
+                        <input id="email" type="text" name="Email" placeholder="Email" disabled>
+                        <span class="email-err text--red"></span>
+                        <h4>Phone number<span class = "text--red">*</span></h4>
                         <input id ="phone-number" type="text" name="phone-number" placeholder="Số điện thoại">
-                        <h4>Địa chỉ<span class = "text--red">*</span></h4>
+                        <span class="phone-number-err text--red"></span>
+                        <h4>Address<span class = "text--red">*</span></h4>
                         <div class="address">
-                            <select name="provices" onChange="handleRenderDistricts(this.value)" id="provinces">
-                                <option value="">--Chọn tỉnh/ Thành phố--</option>
-                            </select>
-                            <select name="districts" onChange="handleRenderWards(this.value)" id="districts">
-                                <option value="">--Chọn huyện/ Quận--</option>
-                            </select>
-                            <select name="wards" id="wards">
-                                <option value="">--Chọn phường/ Xã--</option>
-                            </select>
+                            <div>
+                                <select name="provinces" onChange="handleRenderDistricts(this.value)" id="provinces">
+                                    <option value="">--Chọn tỉnh/ Thành phố--</option>
+                                </select>
+                                <span class="provinces-err text--red"></span>
+                            </div>
+                            <div>
+                                <select name="districts" onChange="handleRenderWards(this.value)" id="districts">
+                                    <option value="">--Chọn huyện/ Quận--</option>
+                                </select>
+                                <span class="districts-err text--red"></span>
+                            </div>
+                            <div>
+                                <select name="wards" id="wards">
+                                    <option value="">--Chọn phường/ Xã--</option>
+                                </select>
+                                <span class="wards-err text--red"></span>
+                            </div>
                         </div>
                         <input id="home-address" type="text" name ="home-address" placeholder="Số nhà">
-                        <h4>Lời nhắn</h4>
+                        <span class="home-address-err text--red"></span>
+                        <h4>Delivery message</h4>
                         <textarea name="message" id="message" type="text" cols="30" rows="5"></textarea>
                     </div>
                     <div class="modal-footer">
-                        <button type = "button" class="btn-cancel" onClick ="toggleModal()">Hủy</button>
-                        <button type = "button" class="btn-accept" onClick ="handleBuy()">Xác nhận</button>
+                        <button type = "button" class="btn-cancel" onClick ="toggleModal()">Cancel</button>
+                        <button type = "button" class="btn-accept" onClick ="handleBuy()">Accept</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
+        <footer class="footer-distributed">
+    </footer>
 </body>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 <script src="../JavaScript/myFunction.js"></script>
-<script src="../JavaScript/localStorage.js"></script>
-<script src="../JavaScript/cartValidate.js"></script>
+<script src="../JavaScript/validate.js"></script>
+<script src ="../JavaScript/navigation.js"></script>
+<script src="../JavaScript/addressRender.js"></script>
+<script src ="../JavaScript/loginAndRegister.js"></script>
 <script src ="../JavaScript/cart.js"></script>
 </html>

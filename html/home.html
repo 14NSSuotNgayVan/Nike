@@ -12,6 +12,8 @@
 </head>
 <body>
     <div class="wrapper">
+        <nav class="main-menu">
+        </nav>
         <header class="header">
             <div class="header-container">
             <div class="header__logo">           
@@ -21,25 +23,49 @@
                     </svg>
                     Nike</a>
             </div>
+            <div class="search-bar">
+                Search 
+                <input id="search-input" type="search" name="search" required>
+                <button class="search-btn" type="button" onClick ="handleSearch()">
+                    <span>Search</span>
+                </button>
+            </div>
             <div class="header-navigation">
                 <a class="header-home navigation--underline" href="./home.html">home</a>
-                <a class="header-about" href="">about</a>
-                <a class="header-bills" href="./bills.html">bills</a>
-                <a href="./cart.html" class="header-cart">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <a class="header-about" href="./contact.html">contact</a>
+                <a class="header-bills " onClick="handleNavigation('../html/bills.html')">bills</a>
+                <a class="header-cart" onClick="handleNavigation('../html/cart.html')">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                 </svg>
-                <span class="header-cart__label--red"></span>
+                <span class="header-cart__label--red hide"></span>
                 </a>
             </div>
         </div>
         </header>
-        <div class="product-container">
+        <div id="search-wrapper" class=" hide">
+            <h3></h3>
+            <div class="render-search"></div>
+        </div>
+        <div id ="new-wrapper"class="product-container new-wrapper">
+            <h3 class="product-container-tittle"><span>New</span><i class="fa fa-star-o fa-2x"></i></h3>
+        </div>
+        <div id ="bestselling-wrapper"class="product-container bestselling-wrapper">
+            <h3 class="product-container-tittle"><span>Best Selling</span><i class="fa fa-heart-o fa-2x"></i></h3>
+        </div>
+        <div id ="sale-wrapper"class="product-container sale-wrapper">
+            <h3 class="product-container-tittle"><span>On sale</span><i class="fa fa-bell-o fa-2x"></i></h3>
+
         </div>
     </div>
+    <footer class="footer-distributed">
+    </footer>
 </body>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 <script src ="../JavaScript/myFunction.js"></script>
-<script src="../JavaScript/localStorage.js"></script>
+<script src="../JavaScript/validate.js"></script>
+<script src ="../JavaScript/navigation.js"></script>
+<script src="../JavaScript/addressRender.js"></script>
+<script src ="../JavaScript/loginAndRegister.js"></script>
 <script src ="../JavaScript/home.js"></script>
 </html>
